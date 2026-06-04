@@ -2,7 +2,19 @@
 
 EcoLens is a lightweight environmental risk analysis tool. Users enter a city, US ZIP Code, or latitude/longitude and receive weather, PM2.5 / AQI, nearby active fire detections, a simple risk level, a map, and an exportable report.
 
-![Dashboard placeholder](docs/screenshots/dashboard-placeholder.svg)
+## Live Website
+
+Try the public GitHub Pages demo:
+
+```text
+https://kaitangkevin.github.io/EcoLens/
+```
+
+GitHub Pages can host the React frontend, but it cannot run the Python FastAPI backend. The public Pages site therefore uses demo data so visitors can click through the dashboard, map, and report workflow.
+
+For live NOAA / OpenAQ / NASA FIRMS data, run the backend locally or deploy it to Render / Railway and point the frontend to that backend URL.
+
+![EcoLens local verification](docs/screenshots/local-verification.png)
 
 ## Features
 
@@ -50,28 +62,43 @@ EcoLens is a lightweight environmental risk analysis tool. Users enter a city, U
 
 The app can run without optional API keys. Weather still works for supported US locations; OpenAQ and FIRMS cards will show setup messages until keys are configured.
 
-## Quick Start
+## Download the Full Project
 
-1. Clone the repository and enter it.
+You can download the complete project in either of these ways.
+
+Clone with Git:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/EcoLens.git
+git clone https://github.com/Kaitangkevin/EcoLens.git
 cd EcoLens
 ```
 
-2. Create environment file.
+Or download a ZIP file:
+
+1. Open https://github.com/Kaitangkevin/EcoLens.
+2. Click `Code`.
+3. Click `Download ZIP`.
+4. Unzip the file and open the extracted `EcoLens` folder in a terminal.
+
+## Run Locally with Live Backend
+
+This is the recommended way to use EcoLens on your own computer. You need two terminal windows: one for the backend and one for the frontend.
+
+Important: `localhost` means your own computer. When the README says `http://localhost:5173`, it is not Kai Tang's computer. It is the local development website that opens after you run the commands below.
+
+1. Create the environment file.
 
 ```bash
 cp .env.example .env
 ```
 
-3. Install frontend dependencies.
+2. Install frontend dependencies.
 
 ```bash
 npm install
 ```
 
-4. Create and activate a Python virtual environment.
+3. Create and activate a Python virtual environment.
 
 ```bash
 python3 -m venv .venv
@@ -79,19 +106,51 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-5. Start the backend.
+On Windows PowerShell, activate the environment with:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+4. Start the backend in the first terminal.
 
 ```bash
 uvicorn backend.app.main:app --reload --port 8000
 ```
 
-6. In another terminal, start the frontend.
+The backend should be available at:
+
+```text
+http://localhost:8000
+```
+
+5. Start the frontend in a second terminal.
 
 ```bash
 npm run dev
 ```
 
-7. Open http://localhost:5173.
+6. Open the frontend URL printed by Vite, usually:
+
+```text
+http://localhost:5173
+```
+
+Now enter a city, ZIP Code, or coordinates and click `Analyze`.
+
+## What Works Locally
+
+- City, ZIP Code, and coordinate search works.
+- NOAA / National Weather Service weather works for supported US locations without an API key.
+- OpenAQ PM2.5 / AQI works after you add `OPENAQ_API_KEY` to `.env`.
+- NASA FIRMS active fire detections work after you add `NASA_FIRMS_MAP_KEY` to `.env`.
+- Map visualization and report export work from the frontend.
+
+## Can I Open It by Double-Clicking HTML?
+
+Not for the full app. EcoLens is a React + Vite + FastAPI project, so the normal local workflow is to run the frontend and backend commands above.
+
+The GitHub Pages link is the easiest click-to-open version. The local setup is the full live-data version.
 
 ## Configuration
 
@@ -131,13 +190,17 @@ The score is capped at 100 and mapped to four levels:
 
 ## Demo Screenshots
 
-Current placeholders:
+Verified local run:
+
+![EcoLens local verification](docs/screenshots/local-verification.png)
+
+Design placeholders:
 
 ![Dashboard placeholder](docs/screenshots/dashboard-placeholder.svg)
 
 ![Map placeholder](docs/screenshots/map-placeholder.svg)
 
-Replace these files with real screenshots before final public launch.
+Replace the placeholder SVG files with additional real screenshots before a final public launch.
 
 ## Deployment
 
