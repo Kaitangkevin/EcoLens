@@ -10,7 +10,7 @@ Try the public GitHub Pages demo:
 https://kaitangkevin.github.io/EcoLens/
 ```
 
-GitHub Pages can host the React frontend, but it cannot run the Python FastAPI backend. The public Pages site therefore uses demo data so visitors can click through the dashboard, map, and report workflow.
+GitHub Pages can host the React frontend, but it cannot run the Python FastAPI backend. The public Pages site therefore runs in browser-only weather mode: city / ZIP / coordinate search updates the map and NOAA weather for supported US locations, while OpenAQ AQI and NASA FIRMS active fire data require the backend.
 
 For live NOAA / OpenAQ / NASA FIRMS data, run the backend locally or deploy it to Render / Railway and point the frontend to that backend URL.
 
@@ -206,13 +206,13 @@ Replace the placeholder SVG files with additional real screenshots before a fina
 
 ### GitHub Pages Demo
 
-This repository includes a GitHub Pages workflow for a static frontend demo:
+This repository includes a GitHub Pages workflow for a browser-only frontend demo:
 
 ```text
 https://kaitangkevin.github.io/EcoLens/
 ```
 
-GitHub Pages only hosts static frontend files. It cannot run the Python FastAPI backend. The Pages build therefore uses demo data unless you deploy the backend separately and configure `VITE_API_BASE_URL`.
+GitHub Pages only hosts static frontend files. It cannot run the Python FastAPI backend. The Pages build can geocode locations and fetch NOAA weather in the browser, but full live AQI and active fire data require a deployed backend with `VITE_API_BASE_URL`.
 
 ### Frontend on Vercel
 
