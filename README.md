@@ -204,3 +204,11 @@ GitHub Actions runs both checks on pushes and pull requests.
 ## License
 
 MIT
+
+## Creator
+
+Created by Kai Tang.
+
+## Personal Tags
+
+Environmental data · Climate risk · GIS mapping · Wildfire monitoring · Air quality · Public safety · Open data · React · FastAPI · Full-stack engineering
