@@ -141,6 +141,16 @@ Replace these files with real screenshots before final public launch.
 
 ## Deployment
 
+### GitHub Pages Demo
+
+This repository includes a GitHub Pages workflow for a static frontend demo:
+
+```text
+https://kaitangkevin.github.io/EcoLens/
+```
+
+GitHub Pages only hosts static frontend files. It cannot run the Python FastAPI backend. The Pages build therefore uses demo data unless you deploy the backend separately and configure `VITE_API_BASE_URL`.
+
 ### Frontend on Vercel
 
 1. Import the GitHub repository into Vercel.
