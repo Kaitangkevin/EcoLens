@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# Node
+node_modules/
+dist/
+npm-debug.log*
+.vite/
+vite.config.js
+vite.config.d.ts
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Generated reports
+*.pdf
+*.md.tmp

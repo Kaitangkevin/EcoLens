@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="EcoLens map screenshot placeholder">
+  <rect width="1200" height="720" fill="#eef4ef"/>
+  <rect x="72" y="64" width="1056" height="592" rx="8" fill="#ffffff" stroke="#d8e2da"/>
+  <path d="M120 220 C260 160 370 280 510 210 C650 140 740 250 880 190 C980 150 1030 190 1080 160" fill="none" stroke="#b6c9bd" stroke-width="34" stroke-linecap="round"/>
+  <path d="M160 560 C310 470 430 570 560 500 C690 430 820 520 1010 430" fill="none" stroke="#d6e3d8" stroke-width="44" stroke-linecap="round"/>
+  <circle cx="620" cy="360" r="160" fill="#176b5b" fill-opacity="0.08" stroke="#176b5b" stroke-width="4"/>
+  <circle cx="620" cy="360" r="14" fill="#176b5b" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="746" cy="285" r="12" fill="#d75d2a" stroke="#ffffff" stroke-width="5"/>
+  <circle cx="512" cy="448" r="12" fill="#d75d2a" stroke="#ffffff" stroke-width="5"/>
+  <text x="112" y="126" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#17231f">Map Placeholder</text>
+  <text x="112" y="166" font-family="Arial, sans-serif" font-size="18" fill="#52635b">Live Leaflet map shows location, 50 km radius, and fire detections.</text>
+</svg>

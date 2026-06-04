@@ -1,0 +1,1 @@
+"""EcoLens FastAPI application package."""
