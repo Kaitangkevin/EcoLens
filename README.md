@@ -270,7 +270,15 @@ MIT
 
 ## Creator
 
-Created by Kai Tang.
+Hello! I’m Kai Tang, a student at the University of Washington and an aspiring data analyst, developer, and entrepreneur.
+
+I build software, websites, and AI-driven tools that focus on solving practical problems. My work combines data analytics, information management, and user-centered design to create meaningful digital experiences.
+
+Currently, I’m exploring the intersection of technology, artificial intelligence, and sustainability while developing projects ranging from web platforms to mobile applications.
+
+I believe that the best technology is not the most complicated one—it is the one that people can actually use.
+
+“Build useful things. Learn continuously. Share openly.”
 
 ## Personal Tags
 
